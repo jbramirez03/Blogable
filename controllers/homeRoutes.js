@@ -24,6 +24,36 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.get('/', async (req, res) => {
+    try {
+        const blogRawData = await Blog.findByPk(req.params.id,
+            {
+                include: [
+                    {
+                        model: User,
+                        attributes: ['username']
+                    },
+                    {
+                        model: Comment,
+                        attributes: ['comment_text', 'user_id', 'date_created']
+                    }
+                ]
+            });
+
+            if(!blogRawData){
+                res.status(404).json({message: 'No blog found with that id.'});
+                return;
+            }
+
+            const blog = blogRawData.get({plain: true});
+            res.json(blog);
+    } catch (err) {
+        if(err){
+            res.status(500).json(err);
+        }
+    }
+});
+
 
 
 module.exports = router;
