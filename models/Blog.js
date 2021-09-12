@@ -27,7 +27,8 @@ Blog.init(
             type: DataTypes.INTEGER,
             references: {
                 model: 'users',
-                key: 'id'
+                key: 'id',
+                unique: false
             }
         }
     },
