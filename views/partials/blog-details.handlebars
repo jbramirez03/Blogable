@@ -1,7 +1,8 @@
 <div class="row">
-    <a href="/blog/{{id}}">
-    <h3>{{blog_name}}</h3>
+    <h3><a href="/blog/{{id}}">
+    {{blog_name}}
     </a>
+    </h3>
     <p>{{description}}</p>
-    <p>{{user.username}} Created this post on {{format_date date_created}}</p>
+    <p>Posted by: {{user.username}} on {{format_date date_created}}.</p>
 </div>
