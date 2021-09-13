@@ -27,7 +27,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/', async (req, res) => {
+router.get('/blog/:id', async (req, res) => {
     try {
         const blogRawData = await Blog.findByPk(req.params.id,
             {
@@ -49,7 +49,10 @@ router.get('/', async (req, res) => {
             }
 
             const blog = blogRawData.get({plain: true});
-            res.json(blog);
+            res.render('blog', {
+                ...blog,
+                logged_in: req.session.logged_in
+            });
     } catch (err) {
         if(err){
             res.status(500).json(err);
