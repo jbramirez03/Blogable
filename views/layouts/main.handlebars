@@ -10,7 +10,12 @@
 </head>
 <body>
     <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="/">Blogs</a>
+      {{#if logged_in}}
+        <a href="/home">profile</a> |
+        <button id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
     </nav>
     <main class="container-fluid">
     {{{body}}}
