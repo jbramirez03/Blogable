@@ -1,22 +1,24 @@
+
 const blogFormHandler = async (event) => {
-    event.preventDefault();
+        event.preventDefault();
 
-    const blogName = document.querySelector('#blog-name').value.trim();
-    const description = document.querySelector('#description').value.trim();
+        const blog_name = document.querySelector('#blog-name').value;
+        const description = document.querySelector('#description').value;
 
-    if (blogName && description) {
-        const response = await fetch('/api/blogs', {
-            method: 'POST',
-            body: JSON.stringify({ blogName, description }),
-            headers: { 'Content-Type': 'application/json' }
-        });
-
-        if (response.ok) {
-            document.location.replace('/');
-        } else {
-          alert(response.statusText);
+        if (blog_name && description) {
+            const response = await fetch('/api/blogs', {
+                method: 'POST',
+                body: JSON.stringify({ blog_name, description }),
+                headers: { 'Content-Type': 'application/json' }
+            });
+            console.log(response);
+            if (response.ok) {
+                document.location.replace('/');
+            } else {
+                alert(response.statusText);
+            }
         }
-    }
 };
 
-document.querySelector('#blog-form').addEventListener('submit', blogFormHandler);
+document.querySelector('#blog-form')
+document.addEventListener('submit', blogFormHandler);

@@ -9,8 +9,7 @@ router.post('/', withAuth, async (req, res) => {
             description: req.body.description,
             user_id: req.session.user_id
         });
-
-        res.status(400).json(newBlog);
+        res.status(200).json(newBlog);
     } catch (err) {
         if(err){
             res.status(500).json(err);
@@ -32,7 +31,7 @@ router.delete('/', withAuth, async (req, res) => {
             return;
         }
         
-        res.status(400).json(blogData);
+        res.status(200).json(blogData);
     } catch (err) {
         if(err){
             res.status(500).json(err);
