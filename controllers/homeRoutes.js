@@ -17,6 +17,7 @@ router.get('/', async (req, res) => {
         });
 
         const blogs = blogsRawData.map(blog => blog.get({ plain: true }));
+        console.log(blogs);
         res.render('homepage', {
             blogs,
             logged_in: req.session.logged_in
@@ -81,14 +82,9 @@ router.get('/signup', async (req, res) => {
 });
 
 router.get('/post', withAuth, async (req, res) => {
-    // if (req.session.logged_in) {
         res.render('post-blog', {
             logged_in: req.session.logged_in
         });
-        // return;
-    // } 
-
-    // res.redirect('/login');
 });
 
 
