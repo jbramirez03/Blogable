@@ -1,3 +1,7 @@
 <section class="container">
 {{> blog-details}}
+{{#each comments as |comment|}}
+{{> comment-details}}
+{{/each}}
+{{> post-comment}}
 </section>
