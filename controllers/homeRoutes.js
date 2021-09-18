@@ -11,12 +11,19 @@ router.get('/', async (req, res) => {
             },
             {
                 model: Comment,
-                attributes: ['comment_text', 'user_id', 'date_created']
+                attributes: ['comment_text', 'date_created'],
+                include: [
+                    {
+                        model: User,
+                        attributes: ['username']
+                    }
+                ]
             }
             ]
         });
 
         const blogs = blogsRawData.map(blog => blog.get({ plain: true }));
+        // res.json(blogs)
         console.log(blogs);
         res.render('homepage', {
             blogs,
@@ -29,7 +36,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/blog/:id', withAuth,async (req, res) => {
+router.get('/blog/:id', withAuth, async (req, res) => {
     try {
         const blogRawData = await Blog.findByPk(req.params.id,
             {
@@ -40,7 +47,10 @@ router.get('/blog/:id', withAuth,async (req, res) => {
                     },
                     {
                         model: Comment,
-                        attributes: ['comment_text', 'user_id', 'date_created']
+                        attributes: ['comment_text', 'date_created'],
+                        include: [
+                            { model: User, attributes: ['username'] }
+                        ]
                     }
                 ]
             });
@@ -82,9 +92,9 @@ router.get('/signup', async (req, res) => {
 });
 
 router.get('/post', withAuth, async (req, res) => {
-        res.render('post-blog', {
-            logged_in: req.session.logged_in
-        });
+    res.render('post-blog', {
+        logged_in: req.session.logged_in
+    });
 });
 
 
