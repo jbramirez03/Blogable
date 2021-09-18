@@ -16,13 +16,19 @@ router.get('/', async (req, res) => {
                             attributes: ['username']
                         }
                     ]
+                },
+                {
+                    model: User,
+                    attributes: ['username']
                 }
             ]
         });
 
         const blogs = (await userBlogs).map(blog => blog.get({ plain: true }));
-        console.log(blogs);
-        res.json(blogs);
+        res.render('dashboard', {
+            blogs,
+            logged_in: req.session.logged_in
+        });
     } catch (err) {
         res.status(500).json(err);
     }
