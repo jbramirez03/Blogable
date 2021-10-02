@@ -34,6 +34,31 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.get('/edit/:id', withAuth, async (req, res) => {
+    try {
+      const dbBlogData = await Blog.findByPk(req.params.id, {
+        attributes: ['user_id', 'id', 'blog_name', 'description'],
+        include: [
+          {
+            model: User,
+            attributes: ['username'],
+          },
+        ],
+      });
+  
+      if (!dbBlogData) {
+        res.status(404).json({ message: 'No Post found with this id' });
+        return;
+      }
+  
+      const blog = dbBlogData.get({ plain: true });
+      res.render('edit-blog', { ...blog, logged_in: true });
+      // console.log(post);
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  });
 
 
 
