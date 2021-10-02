@@ -1,0 +1,23 @@
+<div class="card">
+<section class="card-body">
+    <form id="edit-post-form">
+        <label class="form-label" for="blog-name">Blog name</label>
+        <div class="input-group mb-3">
+            <input class="form-control" id="blog-name">{{blog_name}}</input>
+        </div>
+        <label class="form-label" for="description">Description</label>
+        <div class="input-group mb-3">
+            <textarea class="form-control" id="description" rows="4">{{description}}</textarea>
+        </div>
+        <div class="d-grid gap-2">
+        <button type="submit" class="btn btn btn-secondary">Update</button>
+      </div>
+    </form>
+    {{!-- <form id="delete-form">
+        <div class="d-grid gap-2">
+            <button type="submit" class="btn btn btn-secondary">Delete Post</button>
+        </div>
+    </form> --}}
+</section>
+</div>
+<script src="/js/edit-post.js"></script>
