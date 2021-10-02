@@ -1,14 +1,26 @@
-<div class="container bg-light mb-2">
-    <div class="row">
-    <h3 class="text-center"><a href="/blog/{{id}}">
-    {{blog_name}}
-    </a>
-    </h3>
-    </div>
-    <div class="row">
-    <p class="text-center"><strong>{{description}}</strong></p>
-    </div>
-    <div class="row">
-    <p>Posted by: {{user.username}} on {{format_date date_created}}.</p>
-    </div>
+
+
+<div class="card
+          align
+          mx-4
+          mt-4
+          bg-light
+          text-black
+          customCard position-relative">
+       <a class="text-decoration-none card-header" href="/blog/{{id}}">
+  
+    <h4 class="float-start">
+      {{blog_name}}
+    </h4>
+  </a>
+  <hr />
+  <p class="card-body milestone-description">{{description}}</p>
+    <p class="p-2">Posted By: {{user.username}} on {{format_date date_created}}</p>
+
+ <div class="card-footer pt-3">
+    <div class="position-absolute bottom-0 end-0 ">
+    <a class="me-3 text-decoration-none" href="/blog/{{id}}">{{comments.length}} Comments</a>
+  </div>
+ </div>
+
 </div>
