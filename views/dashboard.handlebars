@@ -4,7 +4,7 @@
     {{/each}}
 </section>
 
-<section>
+{{!-- <section>
     <div>
         <h2>Post a blog</h2>
         <form id="blog-form" class="form">
@@ -21,5 +21,30 @@
             </div>
         </form>
     </div>
+</section>
+<script src="/js/blog-post.js"></script> --}}
+
+<section>
+<div class="card align mx-4 mt-4 bg-light text-black customCard">
+  <div class="card-body">
+    <h4 class="card-title">
+      Create New Blog
+    </h4>
+    <hr />
+    <form id="blog-form" class="card-body">
+      <label class="form-label" for="blog-name">Name of Blog:</label>
+      <div class="input-group mb-3">
+      <input class="form-control" id="blog-name"></input>
+    </div>
+    <label class="form-label" for="description">Description:</label>
+      <div class="input-group mb-3">
+      <textarea class="form-control" id="description" rows="4"></textarea>
+    </div>
+      <div class="d-grid gap-2">
+        <button type="submit" class="btn btn btn-secondary">Create</button>
+      </div>
+    </form>
+  </div>
+</div>
 </section>
 <script src="/js/blog-post.js"></script>
