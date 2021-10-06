@@ -38,10 +38,23 @@ This Project is covered by the [MIT] license
 
 ## Technologies
 
-<img align="left" width="26px" alt="Node.js" src="https://user-images.githubusercontent.com/82244776/131235189-bd5f5fc2-6802-4f79-b553-267a05f37ab3.png">
-<img align="left" width="27px" alt="mysql" src="https://user-images.githubusercontent.com/82244776/131235260-c522d5d8-e58d-4bd9-82ec-a3cc3c119ccd.png">
-<img align="left" width="26px" alt="express" src="https://user-images.githubusercontent.com/82244776/132081029-26f8074c-5c16-40d1-999f-9ee7a64ceb7d.png">
-<img align="left" width="26px" alt="Javascript" src="https://user-images.githubusercontent.com/82244776/128645657-2dad4760-43e6-42a9-90a5-8f8b3f62b4a0.png"><br><br>
+[<img align="left" width="26px" alt="javascript" src="https://user-images.githubusercontent.com/82244776/132110201-fd810d53-561a-490f-a690-1735d4479281.png">][javascript]
+[<img align="left" width="26px" alt="CSS" src="https://user-images.githubusercontent.com/82244776/132110242-a351f140-471c-4447-a513-91c2b8a166d7.png">][css]
+[<img align="left" width="26px" alt="html" src="https://user-images.githubusercontent.com/82244776/132110258-65db95d8-f35b-4a2d-a091-8051a6b6f4f2.png">][html]
+[<img align="left" width="26px" alt="nodejs" src="https://user-images.githubusercontent.com/82244776/134751947-5908a635-9d69-4dc7-8c4c-aeb9ea0fce66.png">][node]
+[<img align="left" width="26px" alt="mysql" src="https://user-images.githubusercontent.com/82244776/132110331-da9891ba-5eef-44c3-87db-869b91f34702.png">][mysql]
+[<img align="left" width="26px" alt="heroku" src="https://user-images.githubusercontent.com/82244776/132110346-720c197f-d193-4c6f-b84d-e9dc0420bba9.png">][heroku]
+[<img align="left" width="26px" alt="bootstrap" src="https://user-images.githubusercontent.com/82244776/134751737-53bbac67-b5a8-486d-a009-ca59d3e26e6b.png">][bootstrap]
+[<img align="left" width="26px" alt="github" src="https://user-images.githubusercontent.com/82244776/132110367-f5e3b9f5-b3cb-49c1-be7c-aded0df1b8c1.png">][github]<br><br>
+
+[javascript]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+[css]: https://developer.mozilla.org/en-US/docs/Web/CSS
+[html]: https://developer.mozilla.org/en-US/docs/Web/HTML
+[node]: https://nodejs.org/en/docs/
+[mysql]: https://dev.mysql.com/doc/
+[heroku]: https://devcenter.heroku.com/categories/reference
+[github]: https://docs.github.com/en
+[bootstrap]: https://getbootstrap.com/
 
 ## Npm Packages
 
