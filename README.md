@@ -8,6 +8,8 @@
 
 ## Summary
 
+This is a full-stack application that incorporates routes in the backend in order to make changes to a database with a responsive front end design. The Use for this site is to be able to upload blog posts onto a website using a login account in order to create a post and edit or delete your posts.
+
 ## Table of Contents
 
 - [Usage](#usage)
@@ -23,7 +25,12 @@
 
 ## Usage
 
-## Functionality Screenshots
+In order to upload a post you must first sign up and create an account with username and a password you can remember. The next step is to go to your dashboard tab in the navbar and once that is clicked you are taken to a form where you can upload your own post and name it. If you would like to update your post, all you must do is click on the title for your blog in your dashboard and you are taken to an update form where you can make whatever change you would like to the post. If you would like to delete an old blog there is a delete option on the same page that contains the update form.
+
+## Functionality
+
+![Login/post blog](https://user-images.githubusercontent.com/82244776/136288467-9d6a5d37-64ef-49b0-9ebf-403a6f653582.gif)
+![view individual blog](https://user-images.githubusercontent.com/82244776/136286235-e92a660a-0b88-436d-8f95-6750e08902cd.gif)
 
 ## Credits
 
@@ -35,6 +42,8 @@ Jason Barrera-Ramirez<br><br>
 This Project is covered by the [MIT] license
 
 ## Challenges
+
+The main challenge for this project was creating the backend with functional routes that allow changes to be made to the database. The challenge following closely behind, creating sessions in order to create login functionality and to store information in that session.
 
 ## Technologies
 
@@ -66,7 +75,11 @@ This Project is covered by the [MIT] license
 
 ## Features
 
+The main feature of this website is the ability to add your own blog post with having the ability to update or delete those posts. The next important feature of this website is the ability to have a login account and being able to keep your account signed in until you log in.
+
 ## Future Development
+
+A path this website is headed is having the ability to have a user profile that is viewable to anyone. An idea that goes along with a user profile is having the ability to keep your account private.
 
 ## How to Contribute
 
@@ -77,3 +90,5 @@ Fork the Repo and make a pull request for code to be reviewed and considered for
 If there are any questions about the project get in contact with me at my [Email](mailto:jason1287712@gmail.com)
 
 ## Link
+
+This is the link for the live website hosted on [heroku](https://sheltered-escarpment-39389.herokuapp.com/)
